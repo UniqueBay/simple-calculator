@@ -32,6 +32,8 @@ numbers.forEach(number => {
     });
 });
 
+// adding event listeners to operations
+
 operations.forEach((operation) => {
     operation.addEventListener("click", (e) => {
         if (!displayNum2) return;
@@ -48,6 +50,9 @@ operations.forEach((operation) => {
     });
 });
 
+
+// clear variable function 
+
 function clearVar(name = "") {
     displayNum1 += displayNum2 + " " + name + " ";
     display1.innerText = displayNum1;
@@ -55,6 +60,9 @@ function clearVar(name = "") {
     displayNum2 = "";
     tempResult.innerText = result;
 }
+
+
+// Math operation functions
 
 function mathOperation() {
     if (lastOperation === "X") {
@@ -70,7 +78,7 @@ function mathOperation() {
     }
 }
 
-// operation();
+//  Equals operation event listener
 
 equals.addEventListener("click" , () => {
     if (!displayNum2 || !displayNum1) return;
@@ -83,6 +91,8 @@ equals.addEventListener("click" , () => {
     displayNum1 = "";
 });
 
+// Clear variable event listener
+
 clearAll.addEventListener("click", () => {
     displayNum1 = "";
     displayNum2 ="";
@@ -92,6 +102,8 @@ clearAll.addEventListener("click", () => {
     tempResult.innerText = "";
 });
 
+
+// 
 window.addEventListener("keydown", (e) => {
     if (
         e.key === "0" ||
